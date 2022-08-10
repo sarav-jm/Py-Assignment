@@ -6,7 +6,7 @@
     - [In widows OS](#in-widows-os-1)
     - [In  Linux OS](#in--linux-os-1)
 - [Orders API](#orders-api)
-- [Build and run docker](#build-and-run-docker)
+- [Optional Build and run docker](#build-and-run-docker)
 - [Run Flask Server](#run-flask-server)
 - [Examples](#examples)
     - [To Fetch order by given order number](#to-fetch-order-by-given-order-number)
