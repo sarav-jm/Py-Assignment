@@ -1,0 +1,68 @@
+
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Aug  7 21:26:17 2022
+
+@author: sarav
+"""
+# Libraries to be imported
+import numpy as np
+import matplotlib.pyplot as plt
+import random
+from scipy.stats.mstats import winsorize
+
+# Creating an array with 100 random values
+array = [np.random.randint(100) for i in range(100)]
+
+std = np.std(array) # Storing the standard deviation of the array
+mean = np.mean(array) # Storing the mean of the array
+
+# Creating outliers
+# Here, the values which are selected for creating outliers
+# are appended so that same outliers are not created again.
+Already_Selected = []
+i = 0
+
+# Creating 5 outliers on the lower end
+while (i < 5):
+	x = np.random.choice(array) # Randomly selecting a value from the array
+	y = x - mean*3
+	array = np.append(array, y)
+	if (x not in Already_Selected):
+		Already_Selected.append(y)
+
+		i += 1
+
+	else:
+		continue
+
+# Creating 5 outliers on the upper end
+i = 0
+while (i < 5):
+	x = np.random.choice(array) # Randomly selecting a value from the array
+	y = x + mean*4
+	array = np.append(array, y)
+	if (x not in Already_Selected):
+		Already_Selected.append(y)
+
+		i += 1
+
+	else:
+		continue
+
+
+plt.boxplot(array)
+plt.title('Array with Outliers')
+plt.show()
+
+print(mean)
+
+
+WinsorizedArray = winsorize(array,(0.05,0.05))
+
+plt.boxplot(WinsorizedArray)
+plt.title('Winsorized array')
+plt.show()
+
+WinsorizedMean = np.mean(WinsorizedArray)
+print(WinsorizedMean)

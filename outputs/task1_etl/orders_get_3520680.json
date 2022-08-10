@@ -1,0 +1,21 @@
+{
+  "order_id": 3520680,
+  "ticker": "FNOE",
+  "side": "SL",
+  "amount": 3499935.101,
+  "create_date_time": "2022-06-07T13:28:43-04:00",
+  "security_name": "FNOER PBEC",
+  "filled_amount": 3499935,
+  "fills": [
+    {
+      "fill_price": 7.56,
+      "fill_amount": 256817,
+      "fill_as_of_date_time": "2022-06-07T16:00:04-04:00"
+    },
+    {
+      "fill_price": 7.56,
+      "fill_amount": 3079978,
+      "fill_as_of_date_time": "2022-06-07T16:00:04-04:00"
+    }
+  ]
+}

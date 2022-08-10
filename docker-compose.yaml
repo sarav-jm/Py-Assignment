@@ -1,0 +1,38 @@
+version: '3.5'
+services:
+  jupyter-nb-stand-alone:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - UNAME=${CURRENT_UNAME}
+        - UID=${CURRENT_UID}
+        - GID=${CURRENT_GID}
+    image: jupyter-lab-i
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    container_name: jupyter-lab
+    hostname: jupyter-lab
+    user: ${CURRENT_UNAME}
+    networks:
+      - jupyter-lab-net
+    volumes:
+      - ./:/home/${CURRENT_UNAME}/jupyter-lab
+    working_dir: /home/${CURRENT_UNAME}/jupyter-lab
+    ports:
+      - 5555:5555
+      - 4444:4444
+    tty: true
+    # environment:
+      # - GOOGLE_APPLICATION_CREDENTIALS=/home/${CURRENT_UNAME}/client_project/service_accounts/dev_gcs_access_json_key.json
+    entrypoint: jupyter-lab --ip='0.0.0.0' --port=5555 --no-browser --allow-root
+
+networks:
+  jupyter-lab-net:
+    external: true
+
+
+
+
