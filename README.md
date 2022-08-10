@@ -1,6 +1,6 @@
 - [How to run the applications](#how-to-run-the-applications)
   - [Task 1 - ETL of semi-structured data](#task-1---etl-of-semi-structured-data)
-    - [In widows OS](#in-widows-os)
+    - [In windows OS](#in-widows-os)
     - [In  Linux OS](#in--linux-os)
   - [Task 2 - Beta Calculation](#task-2---beta-calculation)
     - [In widows OS](#in-widows-os-1)
@@ -17,7 +17,7 @@
 # How to run the applications
 
 ## Task 1 - ETL of semi-structured data
-ETL the csv file to database, run the server & start serving the API
+ETL of the csv file to database, run the server & start serving the API
 
 ### In widows OS
 
