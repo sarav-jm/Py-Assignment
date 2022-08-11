@@ -19,7 +19,7 @@
 ## Task 1 - ETL of semi-structured data
 ETL of the csv file to database, run the server & start serving the API
 
-### In widows OS
+### In windows OS
 
 1. Download and extract the file
 2. Go to the folder path
