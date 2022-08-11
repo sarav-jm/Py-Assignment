@@ -3,7 +3,7 @@
     - [In windows OS](#in-widows-os)
     - [In  Linux OS](#in--linux-os)
   - [Task 2 - Beta Calculation](#task-2---beta-calculation)
-    - [In widows OS](#in-widows-os-1)
+    - [In windows OS](#in-widows-os-1)
     - [In  Linux OS](#in--linux-os-1)
 - [Orders API](#orders-api)
 - [Optional Build and run docker](#build-and-run-docker)
